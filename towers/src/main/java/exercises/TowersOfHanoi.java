@@ -41,6 +41,13 @@ public class TowersOfHanoi {
         // 1) solve(n - 1, from, to, aux, moves);
         // 2) moves.add(from + " -> " + to);
         // 3) solve(n - 1, aux, from, to, moves);
+
+        if (n == 0) {
+            return;
+        }
+        solve(n -1, from, to, aux, moves);
+        moves.add(from + " -> " + to);
+        solve(n-1, aux, from, to, moves);
     }
 }
 
